@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<?php
+
+//==============
+//CONFIGURATION
+//==============
+
+//IMPORTANT!!
+//Put in your email address below:
+$to = 'office@enhance-face.com';
+
+
+//User info (DO NOT EDIT!)
+$name = stripslashes($_POST['name']); //sender's name
+$email = stripslashes($_POST['email']); //sender's email
+$website = stripslashes($_POST['website']); //sender's website
+
+//The subject
+$subject  = "Enhance-face.com - Questions or Comments "; //The default subject. Will appear by default in all messages. Change this if you want.
+$subject .= stripslashes($_POST['subject']); // the subject
+
+
+//The message you will receive in your mailbox
+//Each parts are commented to help you understand what it does exaclty.
+//YOU DON'T NEED TO EDIT IT BELOW BUT IF YOU DO, DO IT WITH CAUTION!
+$msg  = "From : $name \r\n";  //add sender's name to the message
+$msg .= "Email : $email \r\n";  //add sender's email to the message
+$msg .= "Phone : $phone \r\n"; //add sender's website to the message
+$msg .= "Subject : $subject \r\n\n"; //add subject to the message (optional! It will be displayed in the header anyway)
+$msg .= "---Message--- \r\n".stripslashes($_POST['message'])."\r\n\n";  //the message itself
+
+//Extras: User info (Optional!)
+//Delete this part if you don't need it
+//Display user information such as Ip address and browsers information...
+$msg .= "---User information--- \r\n"; //Title
+$msg .= "User IP : ".$_SERVER["REMOTE_ADDR"]."\r\n"; //Sender's IP
+$msg .= "Browser info : ".$_SERVER["HTTP_USER_AGENT"]."\r\n"; //User agent
+$msg .= "User come from : ".$_SERVER["HTTP_REFERER"]; //Referrer
+// END Extras
+
+?>
+
+<head>
+<title>Contact Information - Chicago Plastic Surgery Center, LLC | Stacie D. McClane, M.D.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link href="layout.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+	<link href="ie_style.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link href="styles/lava.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-latest.pack.js"></script>
+<script type="text/javascript" src="js/jquery.lavalamp.js"></script>
+<!-- Optional -->
+<script type="text/javascript" src="js/jquery.easing.1.1.js"></script>
+
+<script type="text/javascript">
+    jQuery(function() { jQuery(".lavaLamp").lavaLamp({ fx: "backout", speed: 700 })});
+</script>
+
+<script type="text/javascript" src="js/mootools.js"></script>
+
+<script type="text/javascript" src="js/formcheck.js"></script>
+<script type="text/javascript">
+	window.addEvent('domready', function(){check = new FormCheck('contacts-form', {
+		display : {
+			fadeDuration : 500,
+			errorsLocation : 1,
+			indicateErrors : 1,
+			showErrors : 1
+		}
+	})});
+</script>
+
+
+<script type="text/javascript" src="js/niceforms.js"></script>
+</head>
+
+<body id="contact" class="ef gold">
+
+<?php
+   if ($_SERVER['REQUEST_METHOD'] != 'POST'){
+      $self = $_SERVER['PHP_SELF'];
+?>
+
+	<div class="tail-top2">
+      <div id="main">
+         <!-- header -->
+         <div id="header-small">
+            <div class="row-1">
+            	<div class="indent"> <img src="images/masthead.png" width="378" height="80" alt="Dr. Stacie McClane" />
+                	<ul id="nav" class="lavaLamp">
+                    	<li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">Dr. McClane</a></li>
+                        <li><a href="procedures.html">Procedures</a></li>
+                        <li><a href="patient.html">Testimonials</a></li>
+                        <li><a href="press.html">News &amp; Press</a></li>
+                        <li><a href="practice.html">Our Practice</a></li>
+                        <li><a href="glossary.html">Glossary</a></li>
+                        <li><a href="https://shopmcclanemd.com/">Shop Online</a></li>
+                        <li><a href="registration.html">Registration</a></li>
+                        <li class="current"><a href="contact.php">Contact Us</a></li>
+                   </ul>
+                 </div>
+            </div>
+          
+         </div>
+         <!-- content -->
+         <div id="content">
+            <!-- box begin -->
+            <div class="box">
+            	<div class="inner1">
+               	<img class="img-indent" alt="" src="images/5page-img1.jpg" />
+                  <h1 class="alt">Contact Information</h1>
+
+                  <p>Please feel free to contact us with any questions or concerns that you might have. Our office staff is always available to address your needs, make an appointment, or set up a consultation.</p>
+                  
+                  
+                  <h6>Phone: (312) 867-9500 </h6>
+                  <h6>Fax: (312) 674-7501</h6>
+                  
+                  <div class="clear"></div>
+               </div>
+
+            </div>
+            <!-- box end -->
+            <div class="indent1">
+               <div class="container">
+                  <div class="col-1">
+                  <h2>Locations</h2>
+                  
+                  <h4>Chicago</h4>
+         <img src="images/9004.jpg" style="width:150px; height:180px;" alt="Chicago Office Image" />
+
+<p style="white-space:normal; line-height:1.5;">
+  60 E. Delaware<br />
+  Suite 1412<br />
+  Chicago, IL 60611
+</p>
+                     
+                <h4>Hoffman Estates</h4>
+                      <img src="images/249-St-Alexius.jpg" width="150" height="100"  />
+                     <p> <strong>St. Alexius Medical Center</strong><br />
+                    1555 Barrington Rd<br />
+                       Doctors Office Building Three<br />
+                       Suite 3400<br />
+                       Hoffman Estates, IL 60169
+                       
+                </p>
+                     
+                  	<h2>Contact Form</h2>
+                     
+                     <form name="form" method="post" id="contacts-form" action="<?php echo $self;?>" >
+                        <div>
+                           <label for="name">Name:<br /><input id="name" name="name" type="text" class="validate['required','length[3,-1]','nodigit']" size="20" /></label>
+                           <label for="email">E-mail:<br /><input id="email" name="email" type="text" class="validate['required','length[5,-1]','email']" size="20" /></label>
+                           <label for="phone">Phone:<br /><input id="phone" name="phone" type="text" class="validate['required','length[5,-1]','phone']" size="20" /></label>
+                           Message:<br /><textarea id="message" name="message" type="text" class="validate['required']" rows="10" cols="30"></textarea>
+                            <label for="spamcheck"><strong>Please answer this question: <span class="blue">2 + 3 = ?</span></strong>
+			<input id="spamcheck" name="spamcheck" type="text" size="5" class="validate['required','number','spamcheck']" /></label>
+            
+                           <div class="wrapper"><br /><input type="submit" class="link1" value="Send" /></div>
+                        </div>
+                     <div id="stylesheetTest"></div>
+
+	</form>
+                  </div>
+                  <div class="col-2">
+                  	<!-- box1 begin -->
+                     <div class="box1">
+                     	<div class="inner">
+<!-- ============================== -->
+<!-- FORMATTED DRIVING DIRECTIONS SECTION -->
+<!-- ============================== -->
+<div class="inner">
+                        	<h2>Driving Directions</h2>
+                              <h3>From Lake Shore Drive</h3>
+                              <h5>North</h5>
+                              <p>Going south on Lake Shore Dr. exit at Michigan Avenue and get into the far right 
+lane. Turn right at Walton Street. The entrance to the Self Park 900 N. Michigan 
+Ave garage will be on your left. Park on the Delaware side of the garage and take 
+the elevators to the 14th floor.</p>
+                      <h5>South</h5> 
+                              <p>Going north on Lake Shore Drive, exit on Chicago Avenue. Head straight until your
+reach Rush street and turn right. After passing Delaware Place, the entrance to the
+Self Park 900 N. Michigan Ave garage will be on your right. Park on the Delaware 
+side of the garage and take the elevators to the 14th floor. Turn right on Delaware 
+Place if getting dropped off, the building will be on your left.</p>
+                              
+                              <h3>From the Kennedy</h3> 
+                              <p>ake the Kennedy expressway to the Ohio exit. Turn left on Rust Street. After 
+passing Delaware Place, the entrance to the Self Park 900 N. Michigan Ave garage
+will be on your right. Remember to take a photo of the floor you parked on before 
+getting in the elevator. Turn right on Delaware Place if getting dropped off, the 
+building will be on your left.</p>
+
+  <p style="font-style:italic; margin-top:10px;">*Valet parking is available on Delaware Place and Earnst Court.</p>
+</div>
+
+
+                              
+                              <iframe width="640" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?q=680+North+Lake+Shore+Drive,+Suite+930,+Chicago,+Il.+60611&amp;gl=us&amp;hl=en&amp;cd=15&amp;ei=0DUpS-nmIKHWzATBrMCsBg&amp;sll=41.894683,-87.615632&amp;sspn=0.006295,0.006295&amp;ie=UTF8&amp;view=map&amp;cid=14545607692326084009&amp;ved=0CBkQpQY&amp;hq=680+North+Lake+Shore+Drive,+Suite+930,+Chicago,+Il.+60611&amp;hnear=&amp;ll=41.895936,-87.619185&amp;spn=0.007667,0.013733&amp;z=16&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?q=680+North+Lake+Shore+Drive,+Suite+930,+Chicago,+Il.+60611&amp;gl=us&amp;hl=en&amp;cd=15&amp;ei=0DUpS-nmIKHWzATBrMCsBg&amp;sll=41.894683,-87.615632&amp;sspn=0.006295,0.006295&amp;ie=UTF8&amp;view=map&amp;cid=14545607692326084009&amp;ved=0CBkQpQY&amp;hq=680+North+Lake+Shore+Drive,+Suite+930,+Chicago,+Il.+60611&amp;hnear=&amp;ll=41.895936,-87.619185&amp;spn=0.007667,0.013733&amp;z=16&amp;iwloc=A&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+                              
+                        </div>
+                     </div>
+                     <!-- box1 end -->
+                  </div>
+                  
+                  <div class="clear"></div>
+                 
+               </div>
+            </div>
+         </div>
+         <!-- footer -->
+         <div id="footer">
+         	<p>&copy; 2013 All Rights Reserved: Chicago Plastic Surgery Center, LLC - Stacie D. McClane, M.D.&nbsp; |&nbsp; 
+<a href="/privacy.html">Privacy Policy</a> | <a href="/glossary.html">Glossary of Terms</a></p>
+         </div>
+      </div>
+   </div>
+
+    
+<?php
+	} else {
+        error_reporting(0);
+
+      	if  (mail($to, $subject, $msg, "From: $email\r\nReply-To: $email\r\nReturn-Path: $email\r\n"))
+
+	  	//Message sent!
+	  	//It the message that will be displayed when the user click the sumbit button
+	  	//You can modify the text if you want
+      	echo nl2br("
+	   	<div class=\"MsgSent\">
+			<h1>Congratulations!!</h1>
+			<p>Thank you <b><?=$name;?></b>, your message is sent!<br /> We will get back to you as soon as possible.</p>
+		</div>
+	   ");
+
+       	else
+
+	    // Display error message if the message failed to send
+        echo "
+	   	<div class=\"MsgError\">
+			<h1>Error!!</h1>
+			<p>Sorry <b><?=$name;?></b>, your message failed to send. Try later!</p>
+		</div>";
+	}
+?>    
+</body>
+</html>

@@ -1,0 +1,51 @@
+#main {width:920px; margin:0 auto;}
+
+#header {height:338px; background:url(images/header-small.jpg) no-repeat left bottom;}
+.ef #header {height:362px; background:#82868c url(images/header-small.jpg) no-repeat left bottom;}
+#header-index { height:481px; background:none; background:url(images/header-bot.gif) left bottom repeat-x;}
+#header-big { height:376px; background:none; background:url(images/header-big.jpg) left bottom repeat-x;}
+#header-small { height:97px; background:none;}
+.ef #header-small {
+	height: 115px;
+	background: #fff;
+	padding-bottom: 10px;
+}
+#header,#header-small, #header-big, #header-index, #content, #footer { font-size:0.75em;}
+
+.col-1, .col-2, .col-3 { float:left;}
+#practic.ef .col-1 { width:25%;}
+#practice.ef .col-2 { width:75%;}
+
+/*======= index.html =======*/
+#index #content .col-1 {width:246px; margin-right:12px;}
+#index #content .col-2 { width:418px; margin-right:47px;}
+#index #content .col-3 { width:156px;}
+
+/*======= procedures.html =======*/
+#procedures #content .col-1 {width:240px; margin-right:11px;}
+#procedures #content .col-2 { width:636px;}
+
+/*======= about.html =======*/
+#about #content .col-1 {width:192px; margin-right:11px;}
+#about #content .col-2 { width:684px;}
+
+/*======= patient.html =======*/
+#patient #content .col-1 {width:192px; margin-right:11px;}
+#patient #content .col-2 { width:684px;}
+
+/*======= press.html =======*/
+#press #content .col-1 {width:192px; margin-right:11px;}
+#press #content .col-2 { width:684px;}
+
+
+/*======= contact.html =======*/
+#contact #content .col-1 {width:176px; margin-right:25px;}
+#contact #content .col-2 { width:684px;}
+#contact #content .col-3 { width:180px;}
+
+
+/*=========================*/
+
+
+#footer {height:79px; background:url(images/footer-line.gif) left top repeat-x;}
+.ef #footer {height:79px; background:none; border-top:2px solid #67a8bd; }
